@@ -1,0 +1,22 @@
+.banner-section{
+    background: url('https://i.ibb.co/GvbrKmr/bg.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+  top: 50%;
+  color: rgb(204, 236, 248);
+}
+
+.banner-content h1{
+    font-size: 74px;
+    /* text-align: center; */
+}
