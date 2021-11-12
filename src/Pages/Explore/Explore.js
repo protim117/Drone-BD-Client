@@ -1,12 +1,10 @@
-import React from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import Navigation from '../../Shared/Navigation/Navigation';
-import Banner from '../Banner/Banner';
-import Features from '../Features/Features';
-import HomeServices from '../Home-Services/HomeServices';
-import HomeReviews from '../HomeReviews/HomeReviews';
+import { Container, Grid, Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import React, { useEffect, useState } from 'react';
+import ExploreCard from './ExploreCard';
+import Navigation from '../Shared/Navigation/Navigation'
+import Footer from '../Shared/Footer/Footer';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
@@ -45,26 +43,41 @@ function ScrollTop(props) {
     );
   }
   
-
-
-const Home = (props) => {
+const Explore = (props) => {
+    const [products,setProducts]=useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:5000/products')
+        .then(res=> res.json())
+        .then(data=>setProducts(data))
+    },[])
     return (
-        <div>
-           <div className="banner-section" id="back-to-top-anchor">
-           <Navigation></Navigation>
-            <Banner></Banner>
-            </div>
-            <HomeServices></HomeServices>
-            <Features></Features>
-            <HomeReviews></HomeReviews>
-            <Footer></Footer>
-            <ScrollTop {...props}>
+        <div >
+          
+           <Box style={{backgroundColor:'#BAB7E9'}} >
+            <Navigation></Navigation>
+            <Container>
+            <Typography variant="h2" gutterBottom component="div"  id="back-to-top-anchor">
+        All Our AvailAble Products
+      </Typography>
+
+      <Grid container spacing={2} sx={{my:6}}>
+        {
+            products.map(product=><ExploreCard key={product._id} product={product}></ExploreCard>)
+        }
+          </Grid>
+        </Container>
+        <Footer></Footer>
+        </Box>
+          
+        <ScrollTop {...props}>
         <Fab color="primary" size="large" aria-label="scroll back to top">
           <KeyboardArrowUpIcon  />
         </Fab>
       </ScrollTop>
+        
         </div>
+        
     );
 };
 
-export default Home;
+export default Explore;

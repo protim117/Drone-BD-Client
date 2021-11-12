@@ -1,0 +1,28 @@
+
+// Import Swiper React components
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/swiper-bundle.min.css";
+
+// Import Swiper styles
+
+import "swiper/components/effect-coverflow"
+import "swiper/components/pagination"
+
+import SwiperCore, {
+    EffectCoverflow,Pagination
+  } from 'swiper';
+  
+  // install Swiper modules
+  SwiperCore.use([EffectCoverflow,Pagination]);
+<Swiper effect={'coverflow'} grabCursor={true} centeredSlides={true} slidesPerView={'auto'} coverflowEffect={{
+            "rotate": 50,
+            "stretch": 0,
+            "depth": 100,
+            "modifier": 1,
+            "slideShadows": true
+            }} pagination={true} className="mySwiper">
+              </Swiper>
+
+<SwiperSlide> </SwiperSlide>

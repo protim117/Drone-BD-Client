@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <Box >
             <Container>
-            <Box className="banner-content">
+            <Box  data-aos="fade-up-right" className="banner-content">
             <Typography variant='h1'>
                 DroneBD
             </Typography>

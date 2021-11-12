@@ -1,0 +1,82 @@
+[
+    {
+        "name":"DJI Mini 2",
+        "description":"With long battery life, a robust wireless connection, and 4K video, the DJI Mini 2 is the best drone you'll find for less than $500." ,
+        "price": "$449.00",
+        "img":"https://i.ibb.co/JK8BK2x/1.jpg"
+        
+    },
+    {
+        "key":2,
+        "name":"DJI Mavic Air 2",
+        "description":"With a compelling mix of imaging, stability, and safety features, DJI's Mavic Air 2 is the best drone you can buy for under $1,000.",
+        "price":"$799.00",
+        "img":"https://i.ibb.co/z5mWtTQ/2.jpg"
+    },
+    {
+        "key":3 ,
+        "name": "DJI Air 2S",
+        "description":"The DJI Air 2S is a small folding drone with a premium 1-inch sensor camera, 5.4K video, and a number of automated flight and safety features, making it a pro-minded alternative to the more affordable Mavic Air 2.",
+        "price":"$999.00",
+        "img":"https://i.ibb.co/VSMrmn6/3.jpg"
+    },
+    {
+        "key":4 ,
+        "name": "DJI Mavic 3",
+        "description":"The DJI Mavic 3 puts a Hasselblad camera in a small, folding drone. It captures stunning video and stills, but it's missing a few promised features at launch.",
+        "price":"$2199.00",
+        "img":"https://i.ibb.co/m4wYkn6/4.jpg"
+    },
+    {
+        "key": 5,
+        "name": "DJI FPV Combo",
+        "description":"The DJI FPV Combo racing drone places an emphasis on high-speed first-person flight over imaging, making it exhilarating to use, but potentially dangerous if handled without care.",
+        "price":"$1299.00",
+        "img":"https://i.ibb.co/VV52xkG/5.jpg"
+    },
+    {
+        "key": 6,
+        "name": "Parrot Anafi",
+        "description":"The Parrot Anafi puts all emphasis on size—the small, folding drone is ideal for travel, thanks to 4K video capture, a small airframe, and USB charging.",
+        "price":"$699.99",
+        "img":"https://i.ibb.co/pWptVTK/6.jpg"
+    },
+    {
+        "key": 7,
+        "name": "Autel Robotics EVO II Pro",
+        "description":"The Autel EVO II Pro is a folding drone with a stable 6K camera and a remote with a built-in display, so you don't have to use a smartphone to fly it.",
+        "price":"$2095.99",
+        "img":"https://i.ibb.co/7RfVwGy/7.jpg"
+    },
+    {
+        "key":8 ,
+        "name": "Skydio 2",
+        "description":"The Skydio 2 is a high-priced drone with exceptional obstacle avoidance and follow abilities, but is held back by so-so video and short flight times.",
+        "price":"$1349.00",
+        "img":"https://i.ibb.co/d48QBGw/8.jpg"
+    },
+    {
+        "key":9 ,
+        "name": "DJI Inspire 2",
+        "description":"If money is no object, the DJI Inspire 2 is the best drone you can buy, delivering Raw video capture at 5.2K quality, superb build quality, and top-end performance.",
+        "price":"$5719.00",
+        "img":"https://i.ibb.co/Hhys7yM/9.jpg"
+    },
+    {
+        "key":10 ,
+        "name": "Ryze Tello",
+        "description":"The Ryze Tello is a toy quadcopter flyable via smartphone or laptop (using Scratch). Its video quality isn't anything to write home about, but it's a fun tech toy and learning tool.",
+        "price":"$99.00",
+        "img":"https://i.ibb.co/KbdXBs6/10.jpg"
+    }
+
+]
+
+
+
+
+
+
+
+
+
