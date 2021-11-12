@@ -74,12 +74,14 @@ const MyReview = () => {
 
             <TextField sx={{width:'50%',m:5}}
                 id="standard-multiline-static"
-                label="Your Review"
+                label="Your Review(within 150 character)"
                 multiline
                 rows={3}
                 variant="standard"
                 name='review'
+                inputProps={{ maxLength: 150 }}
                 onChange={handleOnChange}
+                required
                  /> <br />
                 <Box sx={{mb:3}}>
                     <Typography variant='h5'>Please Add a Rating</Typography> <br />

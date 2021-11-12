@@ -24,6 +24,7 @@ const Navigation=()=> {
 
            {
              user.email? <Box> 
+               <Typography variant='body2'>Signed in:{user.displayName}</Typography>
                <Link style={{textDecoration:"none"}} to='/explore'><Button color="inherit"  style={{color:'white'}}>Explore</Button></Link>
                <Link style={{textDecoration:"none"}} to='/dashboard' >
                  <Button color="inherit"  style={{color:'white'}}>DashBoard</Button>

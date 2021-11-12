@@ -36,17 +36,20 @@ const AddProduct = () => {
            label="Product's Name" 
            name='name' 
            variant="standard"
+           required
            onChange={handleOnChange} /> <br />
 
             <TextField
              sx={{width:'50%',m:3}}
             id="standard-multiline-static"
-            label="Product Description"
+            label="Product Description(within 150 char)"
             name='description'
             multiline
             rows={3}
             variant="standard"
             onChange={handleOnChange}
+            required
+            inputProps={{ maxLength: 150 }}
             /> <br />
             <TextField 
              sx={{width:'50%',m:2}}
@@ -54,6 +57,7 @@ const AddProduct = () => {
             label="Price" 
             variant="standard" 
             name='price'  
+            required
             defaultValue='$'
             onChange={handleOnChange} /> <br />
 
@@ -63,6 +67,7 @@ const AddProduct = () => {
             label="Img URL"
              variant="standard"
              name='img'
+             required
              onChange={handleOnChange} /> <br />
 
             <Button type='submit'>Add Product</Button>
