@@ -1,32 +1,12 @@
 import { Container, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-import { styled } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import MyOrdersRow from './MyOrdersRow';
 import axios from 'axios'
 
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
-    },
-  }));
-
-
-  
 
 const MyOrders = () => {
-    const{user,isLoading}=useAuth();
+    const{user}=useAuth();
     const[myOrders,setMyOrders]=useState([]);
 
     // can delete a user his order 
@@ -57,22 +37,20 @@ const MyOrders = () => {
         <div>
           <Container>
           <Typography variant='h4' sx={{my:3}}>Your Ordered Products</Typography>
-            <TableContainer component={Paper}>
-      <Table  aria-label="your order">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Product Name</StyledTableCell>
-            <StyledTableCell align="right">Name</StyledTableCell>
-            <StyledTableCell align="right">Address</StyledTableCell>
-            <StyledTableCell align="right">Status</StyledTableCell>
-            <StyledTableCell align="right">Cancel Order?</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {myOrders.map((order) => <MyOrdersRow key={order._id} order={order} handleDelete={handleDelete}></MyOrdersRow>)}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          <div className="table-responsive">
+          <table className="table table-striped table-hover">
+            <thead  className="table-light">
+              <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Cancel Order?</th>
+              </tr>
+            </thead>
+            <tbody>
+            {myOrders.map((order) => <MyOrdersRow key={order._id} order={order} handleDelete={handleDelete}></MyOrdersRow>)}
+            </tbody>
+          </table>
+            </div>
           </Container>
         </div>
     );
