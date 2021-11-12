@@ -12,13 +12,12 @@ const AllOrders = () => {
     const handleAction=id=>{
         const uri=`https://ancient-temple-50859.herokuapp.com/orders/${id}`;
         const singleOrder=AllOrders.find(order=>order._id===id)
-        console.log(singleOrder);
+        
       
         singleOrder.status='Shipped';
 
         axios.put(uri,singleOrder)
         .then(data=>{
-          console.log(data);
           if(data.data.modifiedCount){
             alert('Status Changed to Shipped');
             setProcessing(!processing);

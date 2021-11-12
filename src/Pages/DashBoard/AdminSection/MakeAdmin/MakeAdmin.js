@@ -25,7 +25,6 @@ const MakeAdmin = () => {
     
         axios.put(uri,user)
         .then(data=>{ 
-            console.log(data);
           if(data.data.modifiedCount){
             setOpen(true);
             e.target.reset();

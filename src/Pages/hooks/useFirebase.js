@@ -81,10 +81,9 @@ const auth = getAuth();
     // Save a user in database 
     const saveUser=(email,displayName)=>{
         const newUser={email,displayName};
-        console.log(newUser);
         const uri='https://ancient-temple-50859.herokuapp.com/users' ;
         axios.post(uri,newUser)
-        .then(data=> console.log(data))  
+        .then(data=> {})  
       }
 
     //   observing user 
