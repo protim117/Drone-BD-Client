@@ -112,7 +112,7 @@ const Registration = () => {
        
         </Grid>
         <Grid item xs={12}  md={6}>
-            <img data-aos="zoom-in-up"  data-aos-duration="1500" src="https://i.ibb.co/8gxKRZj/regi-re.png" style={{width:'600px'}} alt="" />
+            <img data-aos="zoom-in-up"  data-aos-duration="1500" src="https://i.ibb.co/8gxKRZj/regi-re.png" className='w-100' alt="" />
         </Grid>
         </Grid>
         </Container>

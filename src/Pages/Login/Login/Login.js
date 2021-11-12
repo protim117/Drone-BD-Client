@@ -88,7 +88,7 @@ const Login = () => {
        
         </Grid>
         <Grid item xs={12}  md={6}>
-            <img data-aos="fade-left"  data-aos-duration="1500" src="https://i.ibb.co/FHqs01R/login-re.png" style={{width:'600px'}} alt="Hello" />
+            <img data-aos="fade-left"  data-aos-duration="1500" src="https://i.ibb.co/FHqs01R/login-re.png" className='w-100' alt="Hello" />
         </Grid>
         </Grid>
         </Container>
