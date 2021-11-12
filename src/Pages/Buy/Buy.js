@@ -10,11 +10,13 @@ import Footer from '../Shared/Footer/Footer';
 const Buy = () => {
     const[singleProduct,setSingleProduct]=useState({});
     const[orderProduct,setOrderProduct]=useState({})
+    // for snackbar 
     const [open, setOpen] = React.useState(false);
     const{user}=useAuth();
     const {productId}=useParams();
     const history=useHistory();
     const location=useLocation();
+    // snackbar close 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
           return;
@@ -23,7 +25,7 @@ const Buy = () => {
         setOpen(false);
       };
    
-
+    //   fetching data 
     useEffect(()=>{
         const uri=`https://ancient-temple-50859.herokuapp.com/products/${productId}`
         fetch(uri)
@@ -31,14 +33,16 @@ const Buy = () => {
         .then(data=> setSingleProduct(data))
     },[])
     const{name,description,img,price}=singleProduct;
+    // order details taking 
     const handleOnChange=e=>{
         const field=e.target.name;
         const value=e.target.value;
         const newOrder={...orderProduct};
         newOrder[field]=value;
         setOrderProduct(newOrder);
-
     }
+
+    // posting order 
     const handleOrder=e=>{
        const proceed=window.confirm('Are you sure to proceed to payment?')
        if(proceed){
@@ -84,9 +88,10 @@ const Buy = () => {
             </Grid>
            </Box>
 
+           {/* Order information taking  */}
+
            <Box sx={{my:5}} style={{backgroundColor:"#EAE5F0"}}>
-              
-              <Typography variant='h3' sx={{py:3}}>
+                <Typography variant='h3' sx={{py:3}}>
                    Order Details
                </Typography>
                <form onSubmit={handleOrder}>
@@ -108,14 +113,14 @@ const Buy = () => {
                name='phone'
                type='number' 
                variant="standard"
-               onChange={handleOnChange} /> <br />
+               onChange={handleOnChange} required/> <br />
                <TextField sx={{width:'50%',mx:'auto',my:3,backgroundColor:'#F7F7F7'}}
                 id="standard-multiline-static"
                 multiline rows={2}
                label="Address" 
                name='address'
                onChange={handleOnChange}
-               variant="standard" /> <br />
+               variant="standard" required /> <br />
                <Button type='submit' variant="contained"  sx={{my:4}}> Place Order</Button>
                <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
                     <Alert onClose={handleClose}  variant="filled"   severity="success" sx={{ width: '100%' }}>

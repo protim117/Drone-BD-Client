@@ -11,6 +11,7 @@ import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
 
+// scroll to top button 
 function ScrollTop(props) {
     const { children, window } = props;
     const trigger = useScrollTrigger({
@@ -50,6 +51,7 @@ function ScrollTop(props) {
 const Home = (props) => {
     return (
         <div>
+          {/* all section  */}
            <div className="banner-section" id="back-to-top-anchor">
            <Navigation></Navigation>
             <Banner></Banner>

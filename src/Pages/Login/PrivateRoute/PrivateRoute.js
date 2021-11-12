@@ -5,6 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const{user,isLoading}=useAuth();
+    // if backend's user getting is loading some spinner will be running 
     if(isLoading){
         return  <Stack sx={{ color: 'grey.500',top: 0,
         left: 0,
@@ -20,6 +21,7 @@ const PrivateRoute = ({ children, ...rest }) => {
         <CircularProgress color="inherit" />
       </Stack>
     }
+    // redirecting user to his deserved destination 
     return (
         <Route
         {...rest}

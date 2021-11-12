@@ -3,6 +3,7 @@ import { createContext } from 'react';
 import useFirebase from '../Pages/hooks/useFirebase';
 
 export const AuthContext=createContext();
+// Creating Context 
 const AuthProvider = ({children}) => {
     const allContext=useFirebase();
     return (

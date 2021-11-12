@@ -29,6 +29,7 @@ const MyOrders = () => {
     const{user,isLoading}=useAuth();
     const[myOrders,setMyOrders]=useState([]);
 
+    // can delete a user his order 
 
     const handleDelete=id=>{
         const proceed=window.confirm('Are you sure to delete?');
@@ -45,7 +46,7 @@ const MyOrders = () => {
        
       }
 
-
+// fetching particular user's order 
     useEffect(()=>{
         const uri=`https://ancient-temple-50859.herokuapp.com/orders?email=${user.email}`;
         fetch(uri)

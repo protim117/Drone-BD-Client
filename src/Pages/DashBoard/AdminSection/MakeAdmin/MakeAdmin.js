@@ -17,7 +17,7 @@ const MakeAdmin = () => {
     
         setOpen(false);
       };
-    
+    // making a user admin 
       const handleSubmit=e=>{
         const uri=`https://ancient-temple-50859.herokuapp.com/users/admin`;
         const user={email}

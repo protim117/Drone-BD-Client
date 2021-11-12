@@ -9,6 +9,7 @@ import { Box } from '@mui/system';
 import { Link } from 'react-router-dom';
 
 const HomeService = ({product}) => {
+  // product's showcasing in home 
     const{_id,name,img,description,price}=product;
     var cardStyle = {
         display: 'block',
@@ -16,7 +17,7 @@ const HomeService = ({product}) => {
     }
     return (
         <Container>
-        <Box sx={{my:5}} >
+        <Box sx={{my:5}} className="explore-card">
         <Card style={cardStyle} className="card">
         <CardMedia
           component="img"

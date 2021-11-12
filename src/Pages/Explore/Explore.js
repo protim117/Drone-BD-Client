@@ -44,6 +44,7 @@ function ScrollTop(props) {
   }
   
 const Explore = (props) => {
+  //   fetching data 
     const [products,setProducts]=useState([]);
     useEffect(()=>{
         fetch('https://ancient-temple-50859.herokuapp.com/products')
@@ -52,7 +53,6 @@ const Explore = (props) => {
     },[])
     return (
         <div >
-          
            <Box style={{backgroundColor:'#BAB7E9'}} >
             <Navigation></Navigation>
             <Container>

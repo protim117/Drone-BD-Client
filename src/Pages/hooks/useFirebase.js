@@ -16,6 +16,7 @@ const useFirebase=()=>{
     
 const auth = getAuth();
 
+    // register method 
     const register=(name,email,password,history)=>{
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
@@ -45,7 +46,7 @@ const auth = getAuth();
             })
     }
 
-
+    // login menthod 
     const login=(email,password,location,history)=>{
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
@@ -66,6 +67,8 @@ const auth = getAuth();
             })
     }
 
+    // logout method 
+
     const logOut=()=>{
         setIsLoading(true);
         signOut(auth).then(() => {
@@ -84,6 +87,7 @@ const auth = getAuth();
         .then(data=> console.log(data))  
       }
 
+    //   observing user 
     useEffect(()=>{
        const unSubscribed=onAuthStateChanged(auth, (user) => {
 

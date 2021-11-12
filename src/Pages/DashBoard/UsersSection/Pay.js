@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Pay = () => {
+    // payment section 
     return (
         <div>
             <h1>Payment system coming soon</h1>

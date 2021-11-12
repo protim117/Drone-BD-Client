@@ -4,14 +4,15 @@ import React from 'react';
 import './Banner.css'
 
 const Banner = () => {
+    // banner section 
     return (
         <Box >
             <Container>
-            <Box  data-aos="fade-up-right" className="banner-content">
-            <Typography variant='h1'>
+            <Box  className="banner-content">
+            <Typography variant='h1'  data-aos="fade-up-right">
                 DroneBD
             </Typography>
-            <Typography variant='h4'>
+            <Typography variant='h4' data-aos="fade-up-left">
             Providing a Wide Choice of Drones
             </Typography>
             </Box>

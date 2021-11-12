@@ -25,7 +25,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
 
-
+// user's order row 
 const MyOrdersRow = (props) => {
     const{order,handleDelete}=props;
     return (

@@ -3,6 +3,7 @@ import { Box } from '@mui/system';
 import React from 'react';
 
 const Features = () => {
+     // features of a good drone 
     return (
         <Container>
             <Typography variant='h4' sx={{my:8}}>

@@ -15,6 +15,7 @@ import DashBoard from '../src/Pages/DashBoard/DashBoard/DashBoard'
 
 function App() {
   return (
+    // wrapping up with context 
     <div className="App">
      <AuthProvider>
      <Router>

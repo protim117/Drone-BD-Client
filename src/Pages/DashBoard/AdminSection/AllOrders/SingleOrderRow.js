@@ -6,6 +6,7 @@ import './AllOrder.css'
 const SingleOrderRow = (props) => {
     const{order,handleAction,handleDelete}=props;
     return (
+      // data row 
   <tr>
       <td className='selector'><p data-bs-toggle="tooltip" data-bs-placement="bottom" title={`Id: ${order._id} User Email: ${order.email}`}>{order.productName}</p>
       </td>

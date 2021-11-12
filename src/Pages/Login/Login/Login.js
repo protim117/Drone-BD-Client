@@ -19,6 +19,7 @@ const Login = () => {
       newLogin[field]=value;
       setLoginData(newLogin);
     }
+    // submitting necessary login information 
     const handleSubmit=e=>{
       setAuthError('');
       login(loginData.email,loginData.password,location,history)
@@ -26,7 +27,7 @@ const Login = () => {
       e.preventDefault();
       setOpen(true);
     }
-
+    // after successfull login a snackbar will be open 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
           return;
@@ -51,7 +52,8 @@ const Login = () => {
             type='email'
             onChange={handleOnChange}
             label="Your Email" 
-            variant="standard" />
+            variant="standard" 
+            required/>
              <TextField
              sx={{width:'75%',m:1}}
              id="filled-password-input"
@@ -60,6 +62,7 @@ const Login = () => {
              label="Password"
              type="password"
              variant="standard"
+             required
             />
             <Button 
             variant='contained' 
@@ -68,7 +71,7 @@ const Login = () => {
                 LogIn</Button>
 
             <NavLink to='/register' style={{textDecoration:'none'}}><Button>New User? Please Register</Button></NavLink>
-          
+            {/* navigating between login and registration  */}
 
         {
           user?.email && <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
@@ -77,7 +80,7 @@ const Login = () => {
           </Alert>
         </Snackbar>
       }
-
+ {/* alert will be shown if any error occur */}
       {authError &&  <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}> 
       <Alert severity="error" onClose={handleClose}>{authError}</Alert>
       </Snackbar>}

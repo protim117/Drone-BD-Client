@@ -12,7 +12,7 @@ const HomeServices = () => {
         .then(res=> res.json())
         .then(data=>setServices(data))
     },[])
-    // console.log(services);
+    // Custom arrow for slider 
 
     function SampleNextArrow(props) {
         const { className, style, onClick } = props;
@@ -35,6 +35,7 @@ const HomeServices = () => {
           />
         );
       }
+      // slider setting 
 
     const settings = {
        

@@ -8,7 +8,7 @@ const AllOrders = () => {
     const[AllOrders,setAllOrders]=useState([]);
     const[processing,setProcessing]=useState(false);
 
-  
+    // Changing status Pending to Shipped.
     const handleAction=id=>{
         const uri=`https://ancient-temple-50859.herokuapp.com/orders/${id}`;
         const singleOrder=AllOrders.find(order=>order._id===id)
@@ -25,6 +25,7 @@ const AllOrders = () => {
           }
         })
     }
+    // Deleting any order 
     const handleDelete=id=>{
      const surety=window.confirm('Are you sure to delete this order?');
      if(surety){
@@ -52,7 +53,7 @@ const AllOrders = () => {
          <div className="container table-responsive table-height">
             
           <h2>All Orders Placed by Customers</h2>
-         
+         {/* table for visualization. hover product name column to see some details   */}
           <table className="table table-success table-striped table-borderless ">
           <thead>
             <tr>

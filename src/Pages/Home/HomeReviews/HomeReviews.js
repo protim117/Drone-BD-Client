@@ -10,6 +10,7 @@ const HomeReviews = () => {
         .then(res=> res.json())
         .then(data=>setReviews(data))
     },[])
+    // user's review will be shown here
     return (
         <div>
             <Container>

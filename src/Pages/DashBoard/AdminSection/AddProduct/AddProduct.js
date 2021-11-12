@@ -4,6 +4,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 const AddProduct = () => {
+    // Adding a product 
     const[product,setProduct]=useState({});
     const handleOnChange=e=>{
         const field=e.target.name;
@@ -26,6 +27,7 @@ const AddProduct = () => {
         e.preventDefault();
     }
     return (
+        // taking product details 
         <Container>
             <Typography variant='h3'>Wanna Add Some Product??</Typography>
             <Box>

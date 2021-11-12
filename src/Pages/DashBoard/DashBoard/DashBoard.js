@@ -30,6 +30,7 @@ import ManageProduct from '../AdminSection/ManageProduct/ManageProduct';
 const drawerWidth = 200;
 
 function ResponsiveDrawer(props) {
+  // a drawer for nested button 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -46,6 +47,7 @@ function ResponsiveDrawer(props) {
     <div>
       <Toolbar />
       <Divider />
+      {/* a normal user will see that section  */}
       {!isAdmin && <List>
       <ListItem>  
           <ListItemButton>
@@ -86,6 +88,7 @@ function ResponsiveDrawer(props) {
        
       </List>}
       <Divider />
+      {/* only an admin will see that part   */}
       {isAdmin && <List>
       <ListItem>  
            <ListItemButton>
@@ -164,7 +167,7 @@ function ResponsiveDrawer(props) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+       
         <Drawer
           container={container}
           variant="temporary"
@@ -196,6 +199,7 @@ function ResponsiveDrawer(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
+        {/* for normal user  */}
         {isAdmin && <Switch>
           <Route exact path={path}>
               <DashBoardHome></DashBoardHome>
@@ -213,7 +217,7 @@ function ResponsiveDrawer(props) {
             <ManageProduct></ManageProduct>
             </Route>
         </Switch>}
-        
+        {/* only for admin  */}
         {!isAdmin &&
             <Switch>
             <Route exact path={path}>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 
 const Footer = () => {
+  // footer section 
     return (
         <Box style={{backgroundColor:'#5c6bc0'}}>
             <Container>
@@ -38,7 +39,7 @@ const Footer = () => {
           </ListItem>
           <ListItem >
             <ListItemButton>
-             
+             {/* kept it blank  */}
               <ListItemText primary="Contact US" style={{color:'white'}} />
             </ListItemButton>
           </ListItem>

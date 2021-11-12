@@ -25,6 +25,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
       border: 0,
     },
   }));
+  // Deleting products table row 
 
 const ManageProductTable = ({product,handleDelete}) => {
     return (

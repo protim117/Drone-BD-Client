@@ -23,6 +23,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
   
+  // Deleting any product in disply 
 
 const ManageProduct = () => {
     const[allProducts,setAllProducts]=useState([]);

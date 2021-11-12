@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import StarIcon from '@mui/icons-material/Star';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
-
+// according to given star those caption will be shown 
 const labels = {
     0:'Waste of TIme',
     1: 'Useless',
@@ -14,6 +14,7 @@ const labels = {
     5: 'Excellent',
   };
 
+  // a user can rate that website 
 const MyReview = () => {
     const{user}=useAuth();
     const[rating,setRating]=useState({});
@@ -28,12 +29,13 @@ const MyReview = () => {
         newRating[field]=value;
         setRating(newRating);
     }
+
   const handleSubmit=e=>{
    const proceed=window.confirm('Are you sure you wanna Post the Review?')
    if(proceed){
     rating.displayName=user.displayName;
     rating.email=user.email;
-    rating.rating= value===null? 0:value;
+    rating.rating= value===null? 0:value; //if a user don't give a star, it will be counted as 0 start
     const uri=`https://ancient-temple-50859.herokuapp.com/reviews`;
     axios.post(uri,rating)
     .then(data=> {if(data.data.insertedId){

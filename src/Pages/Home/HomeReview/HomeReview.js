@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 
+// avaters color 
 function stringToColor(string) {
   let hash = 0;
   let i;
@@ -25,6 +26,7 @@ function stringToColor(string) {
 
   return color;
 }
+// making avater from user name 
 
 function stringAvatar(name) {
   return {
@@ -35,10 +37,11 @@ function stringAvatar(name) {
   };
 }
 
+// user's review card  
 const HomeReview = ({singleReview}) => {
     const{displayName,rating,review}=singleReview;
     return (
-        <Grid item xs={12} md={4} className="h-100">
+        <Grid item xs={12} md={4} className="h-100 ">
              <Card className="card p-4 h-100">
             <Box><center> <Avatar  style={{ width: '56px', height: '56px' }} {...stringAvatar(displayName)} /></center> </Box>
             <CardContent>

@@ -4,6 +4,7 @@ import useAuth from '../../hooks/useAuth';
 
 const DashBoardHome = () => {
     const{isAdmin}=useAuth();
+    // welcome message 
     return (
         <div>
            {

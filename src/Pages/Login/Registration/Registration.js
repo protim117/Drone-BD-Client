@@ -42,7 +42,7 @@ const Registration = () => {
       setOpen(false);
     };
 
-
+// after successfull register a snackbar will be open 
     return (
         <Container>
             <Grid container spacing={2}>
@@ -60,7 +60,7 @@ const Registration = () => {
             type='text'
             onChange={handleOnChange}
             label="Your Name" 
-            variant="standard" />
+            variant="standard" required />
             <TextField 
             sx={{width:'75%',m:1}}
             id="standard-basic" 
@@ -68,7 +68,7 @@ const Registration = () => {
             type='email'
             onChange={handleOnChange}
             label="Your Email" 
-            variant="standard" />
+            variant="standard" required/>
              <TextField
              sx={{width:'75%',m:1}}
              id="filled-password-input"
@@ -76,7 +76,7 @@ const Registration = () => {
             onChange={handleOnChange}
              label="Password"
              type="password"
-             variant="standard"
+             variant="standard" required
             />
              <TextField
              sx={{width:'75%',m:1}}
@@ -85,15 +85,16 @@ const Registration = () => {
             onChange={handleOnChange}
              label="ReType Your Password"
              type="password"
-             variant="standard"
+             variant="standard" required
             />
             <Button 
             variant='contained' 
             type='submit'
             sx={{width:'75%',m:1}}>
-                LogIn</Button>
+                Register</Button>
 
             <NavLink to='/login' style={{textDecoration:'none'}}><Button>Already have an account? Please Login</Button></NavLink>
+            {/* navigating between login and registration  */}
             {
           user?.email && <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
           <Alert onClose={handleClose} severity="success">
@@ -101,7 +102,7 @@ const Registration = () => {
           </Alert>
         </Snackbar>
       }
-
+    {/* alert will be shown if any error occur */}
       {authError &&  <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}> 
       <Alert severity="error" onClose={handleClose}>{authError}</Alert>
       </Snackbar>}
