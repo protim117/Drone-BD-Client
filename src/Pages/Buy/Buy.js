@@ -31,7 +31,7 @@ const Buy = () => {
         fetch(uri)
         .then(res=> res.json())
         .then(data=> setSingleProduct(data))
-    },[])
+    },[productId])
     const{name,description,img,price}=singleProduct;
     // order details taking 
     const handleOnChange=e=>{

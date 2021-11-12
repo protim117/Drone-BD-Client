@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword ,updateProfile ,onAuthStateChanged,signOut   } from "firebase/auth";
-import React,{ useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import initFirebase from "../Login/Firebase/firebase.init";
 
@@ -98,7 +98,7 @@ const auth = getAuth();
             setIsLoading(false);
           });
           return ()=> unSubscribed;
-    },[])
+    },[auth])
 
     // Checking if user is an admin 
 

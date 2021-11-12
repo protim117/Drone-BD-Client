@@ -32,7 +32,7 @@ const MyOrders = () => {
         fetch(uri)
         .then(res=>res.json())
         .then(data=>setMyOrders(data))
-    },[])
+    },[user.email])
     return (
         <div>
           <Container>

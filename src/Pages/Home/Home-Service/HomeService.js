@@ -32,7 +32,7 @@ const HomeService = ({product}) => {
           <Typography variant="body2">
           {description}
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="h6">
           {price}
           </Typography>
         </CardContent>

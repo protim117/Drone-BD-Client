@@ -18,8 +18,8 @@ const HomeServices = () => {
         const { className, style, onClick } = props;
         return (
           <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
+            className={className} size='large'
+            style={{ ...style, display: "block", background: "#0373FF",borderRadius:'5px' }}
             onClick={onClick}
           />
         );
@@ -30,7 +30,7 @@ const HomeServices = () => {
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "green" }}
+            style={{ ...style, display: "block", background: "#9C03FF",borderRadius:'5px' }}
             onClick={onClick}
           />
         );
@@ -42,7 +42,6 @@ const HomeServices = () => {
         infinite: true,
         className: "center",
         centerMode: true,
-        infinite: true,
         centerPadding: "50px",
         slidesToShow: 3,
         speed: 500,

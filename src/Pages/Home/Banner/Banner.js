@@ -9,10 +9,10 @@ const Banner = () => {
         <Box >
             <Container>
             <Box  className="banner-content">
-            <Typography variant='h1'  data-aos="fade-up-right">
+            <Typography variant='h1'  data-aos="fade-up-right" data-aos-duration="1000">
                 DroneBD
             </Typography>
-            <Typography variant='h4' data-aos="fade-up-left">
+            <Typography variant='h4' data-aos="fade-up-left" data-aos-duration="1000">
             Providing a Wide Choice of Drones
             </Typography>
             </Box>
