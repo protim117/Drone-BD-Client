@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import {Alert, Button, CircularProgress, Container, Divider, Grid, IconButton, Snackbar, TextField, Typography} from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import { NavLink,useLocation,useHistory } from 'react-router-dom';
+import {Alert, Button, Container, Grid, Snackbar, TextField, Typography} from '@mui/material';
+import { NavLink,useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -32,7 +31,6 @@ const Registration = () => {
         e.preventDefault();
        
     }
-    // console.log(authError);
 
     // MUI Snackbar 
 

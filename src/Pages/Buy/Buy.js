@@ -25,7 +25,7 @@ const Buy = () => {
    
 
     useEffect(()=>{
-        const uri=`http://localhost:5000/products/${productId}`
+        const uri=`https://ancient-temple-50859.herokuapp.com/products/${productId}`
         fetch(uri)
         .then(res=> res.json())
         .then(data=> setSingleProduct(data))
@@ -47,7 +47,7 @@ const Buy = () => {
         orderProduct.productId=productId;
         orderProduct.productName=name;
         orderProduct.status='Pending';
-            const uri=`http://localhost:5000/orders`;
+            const uri=`https://ancient-temple-50859.herokuapp.com/orders`;
         axios.post(uri,orderProduct)
         .then(data=>{
             if(data.data.insertedId){

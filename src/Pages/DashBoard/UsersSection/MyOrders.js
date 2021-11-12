@@ -1,4 +1,4 @@
-import { Button, Container, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { styled } from '@mui/material/styles';
@@ -33,7 +33,7 @@ const MyOrders = () => {
     const handleDelete=id=>{
         const proceed=window.confirm('Are you sure to delete?');
         if(proceed){
-            const uri=`http://localhost:5000/orders/${id}`;
+            const uri=`https://ancient-temple-50859.herokuapp.com/orders/${id}`;
             axios.delete(uri)
             .then(data=> {
                 if(data.data.deletedCount ){
@@ -47,7 +47,7 @@ const MyOrders = () => {
 
 
     useEffect(()=>{
-        const uri=`http://localhost:5000/orders?email=${user.email}`;
+        const uri=`https://ancient-temple-50859.herokuapp.com/orders?email=${user.email}`;
         fetch(uri)
         .then(res=>res.json())
         .then(data=>setMyOrders(data))

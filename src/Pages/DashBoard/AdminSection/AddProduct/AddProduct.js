@@ -1,4 +1,4 @@
-import { Alert, Button, Container, TextField, Typography } from '@mui/material';
+import { Button, Container, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useState } from 'react';
@@ -14,7 +14,7 @@ const AddProduct = () => {
     }
 
     const handleSubmit=e=>{
-        const uri=`http://localhost:5000/products`;
+        const uri=`https://ancient-temple-50859.herokuapp.com/products`;
         axios.post(uri,product)
         .then(res=> {
             if(res.data.insertedId){

@@ -19,7 +19,7 @@ const MakeAdmin = () => {
       };
     
       const handleSubmit=e=>{
-        const uri=`http://localhost:5000/users/admin`;
+        const uri=`https://ancient-temple-50859.herokuapp.com/users/admin`;
         const user={email}
      
     

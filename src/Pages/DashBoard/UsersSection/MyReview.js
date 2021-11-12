@@ -34,7 +34,7 @@ const MyReview = () => {
     rating.displayName=user.displayName;
     rating.email=user.email;
     rating.rating= value===null? 0:value;
-    const uri=`http://localhost:5000/reviews`;
+    const uri=`https://ancient-temple-50859.herokuapp.com/reviews`;
     axios.post(uri,rating)
     .then(data=> {if(data.data.insertedId){
         setOpen(true);

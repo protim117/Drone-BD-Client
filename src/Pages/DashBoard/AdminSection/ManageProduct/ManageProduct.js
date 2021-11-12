@@ -1,4 +1,4 @@
-import { appBarClasses, Container, Typography } from '@mui/material';
+import {Container, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -23,23 +23,13 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
   
-  const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    '&:last-child td, &:last-child th': {
-      border: 0,
-    },
-  }));
-
 
 const ManageProduct = () => {
     const[allProducts,setAllProducts]=useState([]);
 const handleDelete=id=>{
     const surety=window.confirm('Are you sure to delete this Product?');
      if(surety){
-      const uri=`http://localhost:5000/products/${id}`;
+      const uri=`https://ancient-temple-50859.herokuapp.com/products/${id}`;
       axios.delete(uri)
       .then(res=> {
         if(res.data.deletedCount){
@@ -53,7 +43,7 @@ const handleDelete=id=>{
 }
 
     useEffect(()=>{
-        const uri=`http://localhost:5000/products`;
+        const uri=`https://ancient-temple-50859.herokuapp.com/products`;
         fetch(uri)
         .then(res=>res.json())
         .then(data=> setAllProducts(data));

@@ -79,7 +79,7 @@ const auth = getAuth();
     const saveUser=(email,displayName)=>{
         const newUser={email,displayName};
         console.log(newUser);
-        const uri='http://localhost:5000/users' ;
+        const uri='https://ancient-temple-50859.herokuapp.com/users' ;
         axios.post(uri,newUser)
         .then(data=> console.log(data))  
       }
@@ -100,7 +100,7 @@ const auth = getAuth();
     // Checking if user is an admin 
 
 useEffect(()=>{
-    const uri=`http://localhost:5000/users/${user.email}`
+    const uri=`https://ancient-temple-50859.herokuapp.com/users/${user.email}`
     fetch(uri)
     .then(res=> res.json())
     .then(data=> setIsAdmin(data.admin))

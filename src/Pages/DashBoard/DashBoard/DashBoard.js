@@ -33,7 +33,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const{user,logOut,isAdmin}=useAuth();
+  const{logOut,isAdmin}=useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

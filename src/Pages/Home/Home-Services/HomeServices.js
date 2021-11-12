@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material';
+import { Container} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import HomeService from '../Home-Service/HomeService';
 import Slider from "react-slick";
@@ -8,7 +8,7 @@ import { Box } from '@mui/system';
 const HomeServices = () => {
     const [services,setServices]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://ancient-temple-50859.herokuapp.com/products')
         .then(res=> res.json())
         .then(data=>setServices(data))
     },[])
