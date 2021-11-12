@@ -107,7 +107,7 @@ const MyReview = () => {
      
         <Box >{labels[hover !== -1 ? hover : value]}</Box>
                 </Box>
-                <Button sx={{mt:3}} type='submit'>Submit Review</Button>
+                <Button style={{backgroundImage:'linear-gradient(to right, #DBA5F8 , #CA6DFC)',color:'white'}}sx={{mt:3}} type='submit'>Submit Review</Button>
                 <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
           <Alert onClose={handleClose} severity="success">
             Review Posted Successfully

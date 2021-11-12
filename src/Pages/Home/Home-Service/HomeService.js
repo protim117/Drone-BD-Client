@@ -37,7 +37,7 @@ const HomeService = ({product}) => {
           </Typography>
         </CardContent>
         <Box sx={{mx:"auto"}}>
-          <Link to={`buy/${_id}`} style={{textDecoration:'none'}} ><Button  >Buy Now</Button></Link>
+          <Link to={`buy/${_id}`} style={{textDecoration:'none'}} ><Button  style={{backgroundImage:'linear-gradient(to right, #cefbfd,#2BF2FE)'}} >Buy Now</Button></Link>
         </Box>
       </Card>
         </Box>

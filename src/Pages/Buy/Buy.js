@@ -121,7 +121,7 @@ const Buy = () => {
                name='address'
                onChange={handleOnChange}
                variant="standard" required /> <br />
-               <Button type='submit' variant="contained"  sx={{my:4}}> Place Order</Button>
+               <Button style={{backgroundImage:'linear-gradient(to right, #cefbfd,#2BF2FE)',color:'blue'}} type='submit' variant="contained"  sx={{my:4}}> Place Order</Button>
                <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
                     <Alert onClose={handleClose}  variant="filled"   severity="success" sx={{ width: '100%' }}>
                     Order Placed Successfully

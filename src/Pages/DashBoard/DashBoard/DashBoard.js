@@ -49,11 +49,11 @@ function ResponsiveDrawer(props) {
       <Divider />
       {/* a normal user will see that section  */}
       {!isAdmin && <List>
-      <ListItem>  
+      <ListItem >  
           <ListItemButton>
               <Link to={`${url}/pay`}  
               style={{textDecoration:'none'}} >
-                 <Button>Pay</Button>
+                 <Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Pay</Button>
               </Link> 
            </ListItemButton>
        </ListItem>
@@ -61,7 +61,7 @@ function ResponsiveDrawer(props) {
            <ListItemButton>
                <Link to={`${url}/myorders` } 
                style={{textDecoration:'none'}}>
-                   <Button>My Orders</Button>
+                   <Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>My Orders</Button>
                 </Link>
             </ListItemButton>
         </ListItem>
@@ -69,20 +69,20 @@ function ResponsiveDrawer(props) {
           <ListItemButton> 
               <Link to={`${url}/myreview`} 
               style={{textDecoration:'none'}}>
-                  <Button>Review</Button>
+                  <Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Review</Button>
                 </Link> 
             </ListItemButton>
         </ListItem>
-       <ListItem>  
+       <ListItem >  
            <ListItemButton>
                <Link to='/'
                style={{textDecoration:'none'}}
-               ><Button>Home</Button> </Link>
+               ><Button  style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Home</Button> </Link>
                </ListItemButton>
                </ListItem>
        <ListItem>  
            <ListItemButton>
-               <Button onClick={logOut}>LogOut</Button> 
+               <Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}} onClick={logOut}>LogOut</Button> 
                </ListItemButton>
                </ListItem>
        
@@ -94,40 +94,40 @@ function ResponsiveDrawer(props) {
            <ListItemButton>
                <Link to={`${url}/allorder`} 
                style={{textDecoration:'none'}}
-               ><Button>Manage All Orders</Button> </Link>
+               ><Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Manage All Orders</Button> </Link>
                </ListItemButton>
                </ListItem>
                <ListItem>  
            <ListItemButton>
                <Link to={`${url}/addaproduct`} 
                style={{textDecoration:'none'}}
-               ><Button>Add A Product</Button> </Link>
+               ><Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Add A Product</Button> </Link>
                </ListItemButton>
                </ListItem>
                <ListItem>  
            <ListItemButton>
                <Link to={`${url}/makeadmin`} 
                style={{textDecoration:'none'}}
-               ><Button>Make Admin</Button> </Link>
+               ><Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Make Admin</Button> </Link>
                </ListItemButton>
                </ListItem>
                <ListItem>  
            <ListItemButton>
                <Link to={`${url}/manageproduct`} 
                style={{textDecoration:'none'}}
-               ><Button>Manage Product</Button> </Link>
+               ><Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Manage Product</Button> </Link>
                </ListItemButton>
                </ListItem>
                <ListItem>  
-           <ListItemButton>
+           <ListItemButton >
                <Link to='/'
                style={{textDecoration:'none'}}
-               ><Button>Home</Button> </Link>
+               ><Button  style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}}>Home</Button> </Link>
                </ListItemButton>
                </ListItem>
                <ListItem>  
            <ListItemButton>
-               <Button onClick={logOut}>LogOut</Button> 
+               <Button style={{backgroundImage:'linear-gradient(to right, #4195FF , #7989FC)',color:'white'}} onClick={logOut}>LogOut</Button> 
                </ListItemButton>
                </ListItem>
       </List>}

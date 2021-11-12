@@ -46,7 +46,7 @@ const MakeAdmin = () => {
           label="Admin's email"
           onChange={handleOnChange}
            variant="standard" required /> <br/>
-           <Button variant='contained' type='submit'>Add Admin</Button>
+           <Button style={{backgroundImage:'linear-gradient(to right, #DBA5F8 , #CA6DFC)',color:'white'}} variant='contained' type='submit'>Add Admin</Button>
            <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
           Admin added Successfully

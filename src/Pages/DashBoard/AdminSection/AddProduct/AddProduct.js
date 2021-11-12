@@ -72,7 +72,7 @@ const AddProduct = () => {
              required
              onChange={handleOnChange} /> <br />
 
-            <Button type='submit'>Add Product</Button>
+            <Button style={{backgroundImage:'linear-gradient(to right, #DBA5F8 , #CA6DFC)',color:'white'}} type='submit'>Add Product</Button>
            </form>
             </Box>
 
