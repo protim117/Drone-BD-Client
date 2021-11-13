@@ -12,6 +12,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Buy from './Pages/Buy/Buy';
 import Explore from './Pages/Explore/Explore';
 import DashBoard from '../src/Pages/DashBoard/DashBoard/DashBoard'
+import  NotFound  from '../src/Pages/Shared/404/NotFound';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
          </Route>
          <Route path="/register">
            <Registration></Registration>
+         </Route>
+         <Route path="*">
+          <NotFound></NotFound>
          </Route>
        </Switch>
      </Router>

@@ -26,7 +26,7 @@ import AllOrders from '../AdminSection/AllOrders/AllOrders';
 import AddProduct from '../AdminSection/AddProduct/AddProduct';
 import MakeAdmin from '../AdminSection/MakeAdmin/MakeAdmin';
 import ManageProduct from '../AdminSection/ManageProduct/ManageProduct';
-
+import NotFound from '../../Shared/404/NotFound'
 const drawerWidth = 200;
 
 function ResponsiveDrawer(props) {
@@ -216,6 +216,9 @@ function ResponsiveDrawer(props) {
             <Route path={`${path}/manageproduct`}>
             <ManageProduct></ManageProduct>
             </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
         </Switch>}
         {/* only for admin  */}
         {!isAdmin &&
@@ -231,6 +234,9 @@ function ResponsiveDrawer(props) {
             </Route>
             <Route path={`${path}/myreview`}>
             <MyReview></MyReview>
+            </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
             </Route>
           </Switch>
         }
